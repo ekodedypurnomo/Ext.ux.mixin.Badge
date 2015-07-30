@@ -34,10 +34,10 @@ Ext.define('Ext.ux.mixin.Badge', {
 
         if (me.rendered) {
             el.set({
-                'data-abp-badge' : badgeText
+                'data-badge-text' : badgeText
             });
 
-            el.toggleCls('abp-badge', !!badgeText);
+            el.toggleCls(Ext.baseCSSPrefix + 'badge', !!badgeText);
 
             me.fireEvent('badgetextchange', me, badgeText, oldBadgeText);
         }
